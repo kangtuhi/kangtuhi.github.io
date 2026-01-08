@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kang Tuhi - Jasa Pembuatan Website Profesional</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">KangTuhi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#layanan">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#harga">Harga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Konsultasi Gratis</a>
+            </li>
+
+            <!-- AUTH -->
+            <li class="nav-item auth-guest">
+              <a
+                class="nav-link"
+                href="#loginModal"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login / Daftar
+              </a>
+            </li>
+
+            <li class="nav-item auth-user d-none dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-person-circle"></i>
+                <span id="navUserName"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#">Dashboard</a>
+                </li>
+                <li>
+                  <button class="dropdown-item text-danger" onclick="logout()">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <span class="badge bg-light text-primary mb-3"
+              >🚀 Jasa Website Profesional</span
+            >
+            <h1 class="fw-bold mt-3" data-aos="fade-right">
+              Website Modern untuk<br />
+              Meningkatkan Bisnis Anda
+            </h1>
+            <p
+              class="mt-4 text-white-50"
+              data-aos="fade-right"
+              data-aos-delay="150"
+            >
+              Kami membantu UMKM & perusahaan memiliki website cepat dan
+              profesional.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <a href="#kontak" class="btn btn-light btn-modern me-2"
+                >Mulai Sekarang</a
+              >
+              <a href="#portfolio" class="btn btn-outline-light btn-modern"
+                >Lihat Portfolio</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwc2VydmljZXN8ZW58MHx8MHx8fDA%3D"
+              class="img-fluid"
+              data-aos="zoom-in"
+              width="600px"
+              height="400px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LAYANAN ===== -->
+    <section id="layanan" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-aos="fade-left">Layanan Unggulan</h2>
+          <p class="text-muted" data-aos="fade-right">
+            Solusi digital lengkap untuk bisnis Anda
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card card-modern p-4">
+              <div class="icon-circle">
+                <i class="bi bi-building fs-4 text-primary"></i>
+              </div>
+              <h5 class="fw-bold">Company Profile</h5>
+              <p class="text-muted">
+                Website profesional untuk branding perusahaan & UMKM.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card card-modern p-4">
+              <div class="icon-circle">
+                <i class="bi bi-cart fs-4 text-primary"></i>
+              </div>
+              <h5 class="fw-bold">Toko Online</h5>
+              <p class="text-muted">
+                E-commerce modern dengan pembayaran otomatis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card card-modern p-4">
+              <div class="icon-circle">
+                <i class="bi bi-code-slash fs-4 text-primary"></i>
+              </div>
+              <h5 class="fw-bold">Web Application</h5>
+              <p class="text-muted">
+                Sistem custom sesuai workflow bisnis Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-aos="fade-left">Portfolio Kami</h2>
+          <p class="text-muted" data-aos="fade-right">
+            Beberapa project terbaik kami
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div
+              class="folioHarga-modern position-relative overflow-hidden rounded"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
+                class="img-fluid"
+                width="400px"
+                height="250px"
+              />
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="zoom-in">
+            <div
+              class="folioHarga-modern position-relative overflow-hidden rounded"
+            >
+              <img
+                src="https://plus.unsplash.com/premium_photo-1678566153919-86c4ba4216f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
+                class="img-fluid"
+                width="400px"
+                height="250px"
+              />
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="zoom-in">
+            <div
+              class="folioHarga-modern position-relative overflow-hidden rounded"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
+                class="img-fluid"
+                width="400px"
+                height="250px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HARGA ===== -->
+    <section id="harga" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-aos="fade-left">Paket Harga</h2>
+          <p class="text-muted" data-aos="fade-right">
+            Pilih paket sesuai kebutuhan Anda
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="folioHarga-modern card text-center shadow-sm">
+              <div class="card-header fw-bold">Basic</div>
+              <div class="card-body">
+                <p class="text-muted">Mulai dari</p>
+                <h3>Rp 100.000</h3>
+                <p class="text-muted">Website sederhana</p>
+                <a href="#" class="btn btn-outline-primary">Pilih</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="folioHarga-modern card text-center shadow-sm border-primary"
+            >
+              <div class="card-header fw-bold bg-primary text-white">
+                Premium
+              </div>
+              <div class="card-body">
+                <p class="text-muted">Mulai dari</p>
+                <h3>Rp 1.000.000</h3>
+                <p class="text-muted">Website profesional</p>
+                <a href="#" class="btn btn-primary">Pilih</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="folioHarga-modern card text-center shadow-sm">
+              <div class="card-header fw-bold">Custom</div>
+              <div class="card-body">
+                <p class="text-muted">Tentukan sendiri</p>
+                <h3>By Request</h3>
+                <p class="text-muted">Sistem sesuai kebutuhan</p>
+                <a
+                  href="https://wa.me/6289620055191"
+                  target="_blank"
+                  class="btn btn-outline-primary"
+                  >Konsultasi</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section id="kontak" class="section-padding gradient-bg text-center">
+      <div class="container">
+        <div data-aos="fade-up">
+          <h2 class="fw-bold">Siap Naik Level Digital?</h2>
+          <p class="mt-3 text-white-50">
+            Konsultasi GRATIS & dapatkan penawaran terbaik hari ini.
+          </p>
+          <a
+            href="https://wa.me/6289620055191"
+            class="btn btn-light btn-modern pulse mt-4"
+            target="_blank"
+          >
+            <i class="bi bi-whatsapp"></i> Konsultasi Sekarang
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center">
+        <small>© 2026 KangTuhi. All Rights Reserved.</small>
+      </div>
+    </footer>
+
+    <!-- MODAL=============================================================================== -->
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content card-modern p-3">
+          <h5 class="fw-bold mb-3">Login</h5>
+
+          <input
+            id="loginEmail"
+            class="form-control mb-2"
+            placeholder="Email"
+          />
+          <input
+            id="loginPassword"
+            type="password"
+            class="form-control mb-3"
+            placeholder="Password"
+          />
+
+          <button class="btn btn-primary w-100" onclick="login()">Login</button>
+
+          <p class="text-center mt-3 small">
+            Belum punya akun?
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#registerModal"
+              data-bs-dismiss="modal"
+            >
+              Daftar
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTER MODAL -->
+    <div class="modal fade" id="registerModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content card-modern p-3">
+          <h5 class="fw-bold mb-3">Registrasi</h5>
+
+          <input id="regName" class="form-control mb-2" placeholder="Nama" />
+          <input id="regEmail" class="form-control mb-2" placeholder="Email" />
+          <input
+            id="regPassword"
+            type="password"
+            class="form-control mb-3"
+            placeholder="Password"
+          />
+
+          <button class="btn btn-success w-100" onclick="register()">
+            Daftar Akun
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- =================================================================================== -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- animasi scroll -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/animasiscrol.js"></script>
+    <!-- nav link scroll -->
+    <script src="assets/js/navlinkscrol.js"></script>
+    <!-- Auto Close Navbar on Mobile Click -->
+    <script src="assets/js/autoclosenav.js"></script>
+    <!-- AUTH (LOGIN / LOGOUT) -->
+    <script src="assets/js/fungsilogin.js"></script>
+    <!-- CEK STATUS LOGIN (AUTO) -->
+    <script src="assets/js/cekstatuslogin.js"></script>
+  </body>
+</html>
